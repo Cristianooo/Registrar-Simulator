@@ -1,4 +1,6 @@
+#include "Student.h"
 #include <iostream>
+
 using namespace std;
 
 class Window
@@ -6,10 +8,15 @@ class Window
 	public:
 		Window(Student s);
 		~Window();
+		void setToUnOccupied();
+		void setToOccupied();
+		void setIdleTime();
 		
+		bool getOccupiedBool();
+		int getIdleTime();
 		
-	private:
 		Student student;
 		bool Occupied;
+		int idleT;
 
 };

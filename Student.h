@@ -4,12 +4,22 @@ using namespace std;
 class Student
 {
 	public:
-		Student(int waitTime);
+		Student(int waitTime, int caterTime, int arrivalTime);
 		~Student();
 		
 		int getWaitTime();
+		int getCaterTime();
+		int getArrivalTime();
+		
+		void setWaitTime(int waiTime);
+		void setCaterTime(int caterTime);
+		void setArrivalTime(int arrivalTime);
+		
 	private:
-		int waitTime;
+		int waitT;
+		int caterT;
+		int arrivalT;
+		
 		
 
 };

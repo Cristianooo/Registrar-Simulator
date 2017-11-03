@@ -8,10 +8,28 @@ Window::Window(Student s)
 	s=student;
 	
 }
-Student::~Student()
+Window::~Window()
 {
 }
-int Window::getWaitTime()
+void Window::setToUnOccupied()
 {
-	return s.wait;
+	Occupied=false;
 }
+void Window::setToOccupied()
+{
+	Occupied=true;
+}
+void Window::setIdleTime(int idleTime)
+{
+	idleT=idleTime;
+}
+		
+bool Window::getOccupiedBool()
+{
+	return Occupied;
+}
+int Window::getIdleTime()
+{
+	return idleT;
+}
+		

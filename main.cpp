@@ -1,11 +1,19 @@
+#include <iostream>
+
+#include "simulation.h"
+
+using namespace std;
+	
+
 int main(int argc, char** argv)
-{
+{	
 	string fileName;
-	if(argc > 1)					//Takes file name as a command line argument.
+	if(argc > 1)					
 	{
-		fileName = argv[1];		//Makes sure the array is the right size.
-		bigLoop(fileName)
-				
-		
+		simulation mySim= new simulation();
+		fileName = argv[1];		
+		mySim.makeList(fileName);
+		mySim.bigLoop();	
 	}
-}
+	return 0;
+} 
