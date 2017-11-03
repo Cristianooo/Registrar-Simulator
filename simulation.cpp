@@ -12,9 +12,9 @@ simulation::~simulation()
 }
 handlerList = new DoublyLinkedList<Handler>();				
 
-int windowArrayAmount;
 
-void makeList(string fileName)			//Function for creating a doubly linked list of type handler in order to store all needed information
+
+void simulation::makeList(string fileName)			//Function for creating a doubly linked list of type handler in order to store all needed information
 {
 	int lineCount=0;				//Counts the lines in the text file
 	int arrayCounter=0;		//Counts the index for the handler array
@@ -65,7 +65,7 @@ void makeList(string fileName)			//Function for creating a doubly linked list of
     }
 }
 
-void bigLoop()		//Function for counting time one by one and carrying out necessary operations
+void simulation::bigLoop()		//Function for counting time one by one and carrying out necessary operations
 {
 	Students= new DoublyLinkedQueue<Student>();
 	bool notComplete=true;
@@ -94,6 +94,7 @@ void bigLoop()		//Function for counting time one by one and carrying out necessa
 
 			if(windowArray[i].student.getCaterTime()==0)		
 			{	
+				waitTimes.insertBack(windowArray[i].getWaitTime())
 				windowArray[i].setToUnOccupied();			//When the student has been fully helped, set the window to unoccupied
 			}
 		}
@@ -143,5 +144,14 @@ void bigLoop()		//Function for counting time one by one and carrying out necessa
 	}
 }
 	
-*/
+void simulation::doCalculations()
+{
+	ListNode* curr;
+	curr=waitTimes->front;
+	int sum;
+	int waitTimeCounter;
+	int *tempIntArray[waitTimes.size()];
+	
+
+}
 

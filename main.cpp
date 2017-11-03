@@ -10,7 +10,7 @@ int main(int argc, char** argv)
 	string fileName;
 	if(argc > 1)					
 	{
-		simulation mySim= new simulation();
+		simulation mySim;
 		fileName = argv[1];		
 		mySim.makeList(fileName);
 		mySim.bigLoop();	

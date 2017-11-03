@@ -15,13 +15,15 @@ class simulation
 		
 		void makeList(string fileName);	
 		void bigLoop();	
+		void doCalculations();
 		
 	private:
 		Window* windowArray;
 		DoublyLinkedQueue<Student> *Students;
-		int* waitTimes;
+		DoublyLinkedList<int> *waitTimes;
 		Handler* handlerList;
 		Handler* handler;
+		int windowArrayAmount;
 		
 		
 
